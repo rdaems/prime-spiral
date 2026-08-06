@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Prime spiral</title>
+<meta name="description" content="A zoomable Sacks prime spiral with polynomial curves.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%8C%80</text></svg>">
+</head>
+<body>
+
+<canvas id="stage"></canvas>
+
+<div id="tooltip" hidden></div>
+
+<aside id="panel">
+  <header id="panel-head">
+    <h1>Polynomials</h1>
+  </header>
+
+  <div id="panel-body">
+    <section>
+      <ul id="poly-list"></ul>
+      <form id="poly-add" autocomplete="off">
+        <input id="poly-input" type="text" placeholder="n^2 + n + 41" spellcheck="false" aria-label="New polynomial in n">
+        <button type="submit" title="Add polynomial">+</button>
+      </form>
+      <div id="err-pop" hidden></div>
+    </section>
+  </div>
+</aside>
+
+<div id="loading">building the sieve…</div>
+
+<script src="js/expr.js"></script>
+<script src="js/sieve.js"></script>
+<script src="js/spiral.js"></script>
+<script src="js/poly.js"></script>
+<script src="js/render.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

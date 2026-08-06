@@ -30,8 +30,8 @@ def colormap(x):
     return jnp.clip(x, 0, 255).astype(jnp.uint8)
 
 
-if __name__ == '__main__':
-    spiral_width = 1.5
+def main():
+    spiral_width = 3.0
     max_distance = jnp.sqrt(HEIGHT ** 2 + WIDTH ** 2) / 2 * 1.1
     n = int((max_distance / spiral_width) ** 2)
     primes = jnp.array(get_primes(n))
@@ -48,3 +48,7 @@ if __name__ == '__main__':
     canvas = colormap(canvas)
 
     imageio.imwrite('prime.png', canvas)
+
+
+if __name__ == '__main__':
+    main()
